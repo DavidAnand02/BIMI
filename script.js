@@ -6,3 +6,14 @@ function openFactCheckingWidget() {
         console.log("Voiceflow chat widget is not yet loaded.");
     }
 }
+
+
+
+
+
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
