@@ -13,40 +13,87 @@ body {
     color: #333;
 }
 
-/* Navbar */
+/* Style for the navbar */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
 }
 
 .navbar .logo {
-    color: #fff;
     font-size: 24px;
-    margin-left: 20px;
-    font-weight: bold;
+    color: white;
 }
 
 .navbar .nav-links {
+    display: flex;
     list-style: none;
-    float: right;
-    margin-right: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar .nav-links li {
-    display: inline;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .navbar .nav-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        font-size: 20px; /* Smaller logo size on mobile */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide the nav links initially */
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links li {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add spacing between links */
+    }
+
+    .navbar .nav-links a {
+        font-size: 18px; /* Increase font size slightly on mobile for readability */
+    }
+
+    /* Hamburger icon */
+    .navbar .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        color: white;
+    }
+
+    /* When the menu is active (when hamburger is clicked) */
+    .navbar.active .nav-links {
+        display: flex; /* Show the nav links */
+    }
+}
+
+/* Add a transition effect to the nav bar */
+.navbar .nav-links a {
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #FFA500; /* Change color on hover for interactivity */
+}
+
 
 /* Hero Section */
 .hero-section {
