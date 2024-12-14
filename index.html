@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIMI - The Fact-Checking Chatbot You Can Trust</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BIMI</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#why-bimi">Why BIMI?</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#cta">Start Fact-Checking</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Meet BIMI: The Fact-Checking Chatbot You Can Trust</h1>
+            <p>In a world overwhelmed by misinformation, BIMI is here to set the record straight. Powered by the trusted Google Fact Check Explorer, BIMI taps into a global network of IFCN-accredited fact-checkers and other reputable organizations to ensure you receive the most reliable, accurate information available.</p>
+            <button id="cta-button" onclick="openFactCheckingWidget()">Start Fact-Checking Now</button>
+        </div>
+    </header>
+
+    <section id="about" class="info-section">
+        <h2>About BIMI</h2>
+        <p>At BIMI, we’re committed to empowering you with the truth. Our fact-checking chatbot is designed to provide fast, unbiased, and reliable information verified by trusted sources like the International Fact-Checking Network (IFCN).</p>
+    </section>
+
+    <section id="why-bimi" class="info-section">
+        <h2>Why BIMI?</h2>
+        <ul>
+            <li><strong>Fast & Reliable:</strong> Get accurate information in real-time from verified fact-checking databases.</li>
+            <li><strong>IFCN-Backed:</strong> BIMI consults trusted sources accredited by the International Fact-Checking Network (IFCN), alongside other respected fact-checking organizations.</li>
+            <li><strong>Unbiased Sources:</strong> BIMI works exclusively with credible, independent fact-checkers committed to transparency and factual reporting.</li>
+            <li><strong>Effortless Verification:</strong> No more endless Googling—BIMI simplifies fact-checking to a single conversation.</li>
+        </ul>
+    </section>
+
+    <section id="how-it-works" class="info-section">
+    <h2>How It Works</h2>
+    <ul>
+        <li><strong>Ask BIMI:</strong> Provide the claim you’d like to verify.</li>
+        <li><strong>Fact-Check in Action:</strong> BIMI consults the Google Fact Check Explorer, pulling data from reputable, IFCN-accredited sources.</li>
+        <li><strong>Truth Delivered:</strong> Receive a clear and concise response with links to verified sources.</li>
+    </ul>
+</section>
+
+
+    <section id="cta" class="info-section">
+        <h2>Your Ally Against Misinformation</h2>
+        <p>With BIMI, you don’t have to take things at face value. Equip yourself with the facts, and make informed decisions confidently.</p>
+        <button id="cta-button" onclick="openFactCheckingWidget()">Start Fact-Checking Now</button>
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>&copy; 2024 BIMI. All rights reserved.</p>
+    </footer>
+
+    <!-- Voiceflow Chatbot Integration -->
+    <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '674edeb66f02e1ba79bb60f4' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
